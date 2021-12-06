@@ -26,7 +26,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .antMatchers(HttpMethod.POST, "/login").permitAll()     // doesn't require login
         .antMatchers("/auth/**").permitAll()     // doesn't require login
         .antMatchers("/rest/**").authenticated() // user is logged in
-        .antMatchers("/greet").authenticated() // user is logged in
+        .antMatchers("/api/**").permitAll()
+        .antMatchers("/greet").permitAll()
     ;
   }
   
