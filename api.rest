@@ -1,0 +1,81 @@
+# uses VS Code extension REST Client
+
+GET http://localhost:4000/rest/kittens
+
+###
+
+GET http://localhost:4000/rest/kittens?color=orange3
+
+###
+
+GET http://localhost:4000/rest/kittens/122
+
+### 
+
+POST http://localhost:4000/rest/kittens
+Content-Type: application/json
+
+{
+  "Hobby": "none",
+  "coffee": true
+}
+
+# {
+#   "id": 3,
+#   "name": "Bamse",
+#   "age": 12,
+#   "color": "Orange",
+#   "favoriteToy": "Flying birdy"
+# }
+
+###
+
+PUT http://localhost:4000/rest/kittens/2
+Content-Type: application/json
+
+{
+  "name": "Mike",
+  "age": 13
+}
+
+### USERS
+
+POST http://localhost:4000/rest/users
+Content-Type: application/json
+
+{
+  "name": "Anna",
+  "age": 27
+}
+
+###
+
+GET http://localhost:4000/rest/users
+
+###
+
+GET http://localhost:4000/rest/users/5
+
+###
+
+POST http://localhost:4000/api/register
+Content-Type: application/json
+
+{
+  "name": "Ragnar",
+  "age": 67,
+  "username": "super-ragnar",
+  "password": "ralle123"
+}
+
+###
+
+POST http://localhost:4000/api/login
+Content-Type: application/json
+
+{
+  "username": "super-ragnar",
+  "password": "ralle123"
+}
+
+###
